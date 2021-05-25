@@ -9,21 +9,19 @@
 
 }
 img {
-    height: 100px;
-    width: 100px;
+    position: static;
+    height: 170px;
+    width: 150px;
 }
 
-.card {
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-around;
-    margin: 0.5rem;
+#btn-add {
+    display: inline-block;
+    position: relative;
+    top: 100px;
+
 
 }
 
-#btn {
-    display: flex;
-    justify-content: space-around;
-    width: 5em;
-
+.card-header {
+    position: static;
 }
