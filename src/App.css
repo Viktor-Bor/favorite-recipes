@@ -1,27 +1,71 @@
+.App {
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-top: 3em;
+}
+
 #All-Recepts {
     display: flex;
-    flex-direction: row;
-}
-.App {
-    margin-left: 4em;
-    margin-right: 4em;
-    margin-top: 3em;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
 }
+
+.card :hover {
+    background-color: rgba(54, 94, 121);
+    color: white;
+    border-radius: 10px;
+}
+
+.card :hover > #btn-add{
+   visibility: visible;
+   position: relative;
+   display: flex;
+   cursor: pointer;
+}
+
 img {
     position: static;
-    height: 170px;
-    width: 150px;
+    border-radius: 10px;
+    height: 130px;
+    width: 213px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-container {
+    width: 100%;
 }
 
 #btn-add {
-    display: inline-block;
+    visibility: hidden;
+    background-color: rgba(54, 94, 121, 0.63);
     position: relative;
-    top: 100px;
+    top: 80px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: none;
+}
 
+.card {
+    position: relative;
+    height: 300pxs;
+    width: 13rem;
+    border-radius: 10px;
+    margin: 30px 30px 30px 30px;
 
 }
 
-.card-header {
-    position: static;
+.card-title{
+    position: relative;
+    text-align: center;
+}
+
+.btn-about{
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(54, 94, 121, 0.2);
 }
