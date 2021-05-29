@@ -1,30 +1,31 @@
 import './App.css';
-import { recepts } from './storage.js'
 import React, { useState } from 'react'
-import { Allrecepts } from './AllRecepts.js'
+import { AllRecepts } from './AllRecepts.js'
+import { Recept } from './Recept';
+
 
 
 function App() {
-  const [favoriteRecept, setFavoriteRecept] = useState([])
+  const [favoriteRecept, setFavoriteRecept] = useState()
 
   const toggleFavoriteRecept = (recept) => {
   setFavoriteRecept((prev) => {
-    return [ recept, ...prev ]
+    return[ recept, ...prev ]
   })
-  console.log(recept)
 
 }
 
-const [allRecepts, setAllRecepts] = useState([])
 
 
   return (
     <div className="App">
       <h1>Favorite Recepts:</h1>
+      <div className="Favorite-Recipes">
       {favoriteRecept}
+    </div>
 <hr></hr>
       <h1>All Recepts: </h1>
-       <Allrecepts toggleFavoriteRecept={toggleFavoriteRecept}/>
+       <AllRecepts toggleFavoriteRecept={toggleFavoriteRecept}/>
        </div>
   ); 
 }
