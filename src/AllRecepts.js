@@ -8,13 +8,14 @@ export function AllRecepts({toggleFavoriteRecept}){
 
     return (
         <div id='All-Recepts'>
-        {recepts.map(
-            recipe => <Recept 
+        {recepts.map(recipe => 
+            <Recept 
             toggleFavoriteRecept={toggleFavoriteRecept} 
             recipe={recipe} 
-            key={recipe.id}/>
+            key={recipe.id} />
         )}
     </div>
 )}
+
 
 

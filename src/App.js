@@ -6,15 +6,20 @@ import { Recept } from './Recept';
 
 
 function App() {
-  const [favoriteRecept, setFavoriteRecept] = useState()
-
+  const [favoriteRecept, setFavoriteRecept] = useState([])
   const toggleFavoriteRecept = (recept) => {
-  setFavoriteRecept((prev) => {
-    return[ recept, ...prev ]
-  })
+    const getReceptCard = createElementCard(recept)
+    setFavoriteRecept((prev) => {
+      return [ ...prev, getReceptCard ]
+    })
+  }
 
-}
+  favoriteRecept.map(createElementCard)
 
+  function createElementCard(recipe){
+    return  ( <Recept recipe={recipe} key={recipe.id} />
+    )}
+ 
 
 
   return (
@@ -26,7 +31,7 @@ function App() {
 <hr></hr>
       <h1>All Recepts: </h1>
        <AllRecepts toggleFavoriteRecept={toggleFavoriteRecept}/>
-       </div>
+    </div>
   ); 
 }
 
