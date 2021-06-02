@@ -1,9 +1,7 @@
 import './App.css';
 import React from 'react'
-// import { recepts } from './storage.js'
 
 export function Recept({recipe, toggleFavoriteRecept}) {
-
         return (
              <div className="card">
              <div className="card-container">
