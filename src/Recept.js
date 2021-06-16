@@ -1,15 +1,15 @@
 import './App.css';
 import React from 'react'
 
-export function Recept({recipe, toggleFavoriteRecept}) {
+export function Recept({recipe, toggleFavoriteRecept, favoriteRecept}) {
         return (
              <div className="card">
              <div className="card-container">
-              <button id="btn-add" onClick={() => toggleFavoriteRecept(recipe)} key={recipe.id}>Add favorite</button>
+              <button id="btn-add" onClick={() => toggleFavoriteRecept(recipe)} disabled={(recipe.isFavorite) ? true : false} key={recipe.id}>Add to favorite</button>
               <img src={recipe.img} alt=''/>
               <div className="card-body">
               <h5 className="card-title">{recipe.name}</h5>
-              <button className="btn btn-danger">Abaut</button>
+              <button className="btn btn-danger">About</button>
             </div>
         </div>
      </div>

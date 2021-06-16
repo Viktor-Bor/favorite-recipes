@@ -9,7 +9,7 @@ export function FavoriteRecept({removeFromFavorite, recipe}) {
              <img src={recipe.img} alt=''/>
              <div className="card-body">
              <h5 className="card-title">{recipe.name}</h5>
-             <button className="btn btn-danger">Abaut</button>
+             <button className="btn btn-danger">About</button>
            </div>
         </div>
     </div>

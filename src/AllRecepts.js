@@ -1,19 +1,19 @@
 import './App.css';
-import { recepts } from './storage.js'
 import { Recept } from './Recept.js'
 import React from 'react'
 
-export function AllRecepts({toggleFavoriteRecept}){
+export function AllRecepts({toggleFavoriteRecept, recepts, favoriteRecept}){
     return (
-        <div id='All-Recepts'>
-        {recepts.map(recipe => 
-            <Recept 
-            toggleFavoriteRecept={toggleFavoriteRecept} 
-            recipe={recipe} 
-            key={recipe.id} />
+        <div id='All-Recepts'>  
+        {recepts.map((recipe) => {
+        return <Recept 
+        toggleFavoriteRecept={toggleFavoriteRecept}
+        recipe={recipe} 
+        favoriteRecept={favoriteRecept}
+        key={recipe.id} /> }
         )}
     </div>
-)}
-
+   )
+ }
 
 

@@ -4,7 +4,7 @@
     margin-top: 3em;
 }
 
-#Serch-Term {
+#Serch-Term-Container {
     display: flex;
     justify-content: center;
 
@@ -72,7 +72,7 @@ img {
 
 .card {
     position: relative;
-    height: 100%;
+    height: 300px;
     width: 13rem;
     border-radius: 10px;
     margin: 30px 30px 30px 30px;
