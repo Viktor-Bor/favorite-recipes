@@ -53,7 +53,7 @@ function displayAllRecipes(receptList) {
 
   return (
     <div className="App">
-    <ModalWindow active={modalActive} setModalActive={setModalActive} />
+    {/* <ModalWindow active={modalActive} setModalActive={setModalActive} /> */}
     <div id="Serch-Term-Container">
     <input className="serch-term" type="text" placeholder="serch your recipe" onChange={serchTermToggle}></input>
   </div>
@@ -63,7 +63,9 @@ function displayAllRecipes(receptList) {
   </div>
     <hr></hr>
     <h1>All Recepts: </h1>
+    <div id='All-Recepts'>  
     {allRecipes}
+  </div>
   </div>
   ); 
 }
