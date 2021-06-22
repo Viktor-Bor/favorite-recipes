@@ -1,6 +1,7 @@
 .App {
     margin: 0 auto;
     position: relative;
+    z-index: 0;
 }
 
 
@@ -8,7 +9,6 @@ h1 {
     margin-left: 6rem;
     margin-right: 6rem;
 }
-
 
 hr {
     width: 70rem;
@@ -22,7 +22,6 @@ hr {
     justify-content: center;
 
 }
-
 
 .serch-term {
   width: 60rem;
@@ -81,12 +80,6 @@ img {
 }
 
 
-.card-container {
-    width: 100%;
-    height: 100%;
-}
-
-
 #btn-add {
     visibility: hidden;
     background-color: rgba(54, 94, 121, 0.63);
@@ -99,6 +92,11 @@ img {
     border: none;
 }
 
+
+.card-container {
+    width: 100%;
+    height: 100%;
+}
 
 .card {
     position: relative;
@@ -128,8 +126,35 @@ img {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-color: antiquewhite;
+    background-color: rgba(0, 0, 0, 0.699);
     position: fixed;
-    z-index: 100;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
 }
 
+.modal-window.active {
+    pointer-events: all;
+    visibility: initial;
+    opacity: 1;
+
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    width: 50%;
+    transform: scale(0.5);
+    transition: 0.2s all;
+  
+}
+
+.modal-content.active {
+    transform: scale(1);
+}

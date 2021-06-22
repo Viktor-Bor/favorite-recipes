@@ -2,13 +2,13 @@ import './App.css';
 import { Recept } from './Recept.js'
 import React from 'react'
 
-export function AllRecepts({toggleFavoriteRecept, recepts, modalOpen}){
+export function AllRecepts({toggleFavoriteRecept, recepts, getRecipes}){
     return (
         recepts.map((recipe) => {
         return <Recept 
         toggleFavoriteRecept={toggleFavoriteRecept}
         recipe={recipe} 
-        modalOpen={modalOpen}
+        getRecipes={getRecipes}
         key={recipe.id} /> }
         )
    )

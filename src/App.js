@@ -10,6 +10,7 @@ function App() {
   const [allRecipes, setAllRecipes] = useState([])
   const [favoriteRecept, setFavoriteRecept] = useState([]) 
   const [modalActive, setModalActive] = useState(false)
+  const [modalContent, setModalContent] = useState({})
   const toggleFavoriteRecept = (recept) => {
     recept.isFavorite = true
     const getReceptCard = createElementCard(recept)
@@ -33,13 +34,13 @@ function App() {
     }
 
 
-useEffect(() =>{
+  useEffect(() =>{
   setAllRecipes(displayAllRecipes(recepts))
 },[favoriteRecept])
 
-function displayAllRecipes(receptList) {
+  function displayAllRecipes(receptList) {
     return (
-        <AllRecepts toggleFavoriteRecept={toggleFavoriteRecept} recepts={receptList}/>
+        <AllRecepts toggleFavoriteRecept={toggleFavoriteRecept} recepts={receptList} getRecipes={getRecipes}/>
     )
 }
 
@@ -50,10 +51,15 @@ function displayAllRecipes(receptList) {
   }
 
 
+const getRecipes = (rec) => {
+  setModalActive(true)
+  setModalContent(rec)
+}
+
 
   return (
     <div className="App">
-    {/* <ModalWindow active={modalActive} setModalActive={setModalActive} /> */}
+    <ModalWindow modalContent={modalContent} active={modalActive} setModalActive={setModalActive}/>
     <div id="Serch-Term-Container">
     <input className="serch-term" type="text" placeholder="serch your recipe" onChange={serchTermToggle}></input>
   </div>
@@ -71,13 +77,5 @@ function displayAllRecipes(receptList) {
 }
 
 export default App;
-
-
-
-  // function modalOpen(){
-  //   return (
-  //     <ModalWindow recepts={recepts}/>
-  //   )
-  // }
 
 
