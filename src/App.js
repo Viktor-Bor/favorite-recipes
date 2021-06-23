@@ -24,6 +24,7 @@ function App() {
       <FavoriteRecept 
       removeFromFavorite={removeFromFavorite} 
       recipe={recipe} 
+      getRecipes={getRecipes}
       key={recipe.id}/>
     )
   }
@@ -44,6 +45,7 @@ function App() {
     )
 }
 
+
   function serchTermToggle({ target }) {
     const catchInput = target.value 
     const filteredRecipes = recepts.filter(element => element.name.toLowerCase().includes(catchInput.toLowerCase()))
@@ -61,7 +63,7 @@ const getRecipes = (rec) => {
     <div className="App">
     <ModalWindow modalContent={modalContent} active={modalActive} setModalActive={setModalActive}/>
     <div id="Serch-Term-Container">
-    <input className="serch-term" type="text" placeholder="serch your recipe" onChange={serchTermToggle}></input>
+    <input className="serch-term" type="text" placeholder="serch recipes" onChange={serchTermToggle} />
   </div>
     <h1>Favorite Recepts:</h1>
     <div id="Favorite-Recipes">

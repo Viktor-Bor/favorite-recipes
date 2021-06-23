@@ -31,6 +31,7 @@ hr {
   margin-top: 40px;
   padding: 8px;
   padding-left: 25px;
+  outline: none;
 }
 
 
@@ -55,25 +56,10 @@ hr {
 }
 
 
-.card :hover {
-    background-color: rgba(54, 94, 121);
-    color: white;
-    border-radius: 10px;
-}
-
-
-.card :hover > #btn-add{
-   visibility: visible;
-   position: relative;
-   display: flex;
-   cursor: pointer;
-}
-
-
 img {
     position: static;
     border-radius: 10px;
-    height: 130px;
+    height: 125px;
     width: 213px;
     margin-left: 10px;
     margin-right: 10px;
@@ -81,11 +67,12 @@ img {
 
 
 #btn-add {
+    display: flex;
     visibility: hidden;
-    background-color: rgba(54, 94, 121, 0.63);
     position: relative;
+    background-color: rgba(54, 94, 121, 0.63);
     top: 80px;
-    justify-content: center;
+    height: 30px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
@@ -100,7 +87,7 @@ img {
 
 .card {
     position: relative;
-    height: 300px;
+    height: 310px;
     width: 13rem;
     border-radius: 10px;
     margin: 30px 30px 30px 30px;
@@ -108,17 +95,46 @@ img {
 }
 
 
-.card-title{
-    position: relative;
-    text-align: center;
+.card :hover {
+    background-color: rgba(54, 94, 121);
+    color: white;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.card :hover > .btn-abaut{
+    background-color: #eb3749;
+    border-radius: 6px;
+    height: 48px;
+    width: 87px;
+    transition: 0.2s;
+
+}
+
+.card :hover > #btn-add {
+   visibility: visible;
+   position: relative;
+   display: flex;
+   cursor: pointer;
+   transition: 0.2s;
 }
 
 
-.btn-about{
+.btn-abaut {
     position: relative;
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    color: white;
     border: none;
-    border-radius: 15px;
-    background-color: rgba(54, 94, 121, 0.2);
+    height: 43px;
+    width: 80px;
+    border-radius: 6px;
+    background-color: #eb3749;
+   
+}
+
+.card-title{
+    position: relative;
+    text-align: center;
 }
 
 
@@ -136,6 +152,10 @@ img {
     opacity: 0;
     visibility: hidden;
     transition: 0.2s;
+}
+
+.modal-img {
+   margin: 0 auto;
 }
 
 .modal-window.active {
