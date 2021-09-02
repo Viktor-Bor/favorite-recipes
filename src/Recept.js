@@ -12,7 +12,7 @@ export function Recept({recipe, toggleFavoriteRecept, getRecipes}){
               <button className="btn-abaut" onClick={() => getRecipes(recipe)}>Abaut</button>
             </div>
         </div>
-     </div>
+  </div>
     )
 }
 
