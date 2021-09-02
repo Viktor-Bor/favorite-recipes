@@ -1,3 +1,8 @@
+
+* {
+    box-sizing: border-box;
+}
+
 .App {
     margin: 0 auto;
     position: relative;
@@ -60,7 +65,7 @@ img {
     position: static;
     border-radius: 10px;
     height: 125px;
-    width: 213px;
+    width: 91%;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -131,6 +136,7 @@ img {
     background-color: #eb3749;
    
 }
+
 
 .card-title{
     position: relative;
